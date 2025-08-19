@@ -1,0 +1,28 @@
+.dashboard {
+  padding: 1rem;
+  background-color: #000000; /* Tailwind gray-900 */
+  min-height: 100vh;
+  width: 100%;
+  max-width: 100vw;
+  color: white;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.dashboard-component {
+  margin-bottom: 1rem;
+  will-change: opacity, transform;
+}
+
+.dashboard-component.hidden {
+  pointer-events: none;
+}
+
+.charts-section {
+  margin-top: 2rem;
+  will-change: opacity, transform;
+}
+
+/* Smooth scroll behavior for the entire dashboard */
+.dashboard {
+  scroll-behavior: smooth;
+}

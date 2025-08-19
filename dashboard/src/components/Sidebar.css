@@ -1,0 +1,285 @@
+.sidebar {
+  background-color: #000000;
+  height: 100vh;
+  width: 350px;
+  min-width: 350px;
+  max-width: 350px;
+  padding: 1rem;
+  color: white;
+  border-right: 1px solid #111111;
+  overflow-y: auto;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.sidebar h2 {
+  text-align: center;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 20px 0;
+  letter-spacing: 0.5px;
+}
+
+.sidebar select {
+  padding: 8px;
+  border: 1px solid #333333;
+  border-radius: 6px;
+  background-color: #111111;
+  color: white;
+  width: 100%;
+  min-width: 200px;
+  font-size: 12px;
+}
+
+.sidebar select:focus {
+  outline: none;
+  border-color: #666666;
+  background-color: #222222;
+}
+
+.sidebar select option {
+  background-color: #111111;
+  color: white;
+  padding: 8px;
+  font-size: 12px;
+}
+
+.sidebar select option:checked,
+.sidebar select option:hover {
+  background-color: #333333;
+  color: white;
+}
+
+.sidebar input[type="range"],
+.sidebar input[type="date"],
+.sidebar button {
+  padding: 8px;
+  border: 1px solid #333333;
+  border-radius: 6px;
+  background-color: #111111;
+  color: white;
+}
+
+.sidebar button:hover {
+  background-color: #222222;
+  border-color: #666666;
+}
+
+.sidebar input[type="range"] {
+  background-color: #111111;
+}
+
+.sidebar input[type="date"] {
+  background-color: #111111;
+  color: white;
+}
+
+.symbol {
+  margin-bottom: 10px;
+}
+
+.symbol label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #cccccc;
+}
+
+.symbol input[type="text"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #333333;
+  border-radius: 6px;
+  background-color: #111111;
+  color: white;
+  font-size: 12px;
+  transition: all 0.2s ease;
+}
+
+.symbol input[type="text"]:focus {
+  outline: none;
+  border-color: #666666;
+  background-color: #222222;
+  box-shadow: 0 0 0 2px rgba(102, 102, 102, 0.2);
+}
+
+.symbol input[type="text"]::placeholder {
+  color: #888888;
+}
+
+.type {
+  margin-bottom: 10px;
+}
+
+.type label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #cccccc;
+}
+
+.dates {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.date-row {
+  display: flex;
+  gap: 15px;
+}
+
+.date-input {
+  flex: 1;
+}
+
+.dates label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #cccccc;
+  font-size: 14px;
+}
+
+.dates input[type="date"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #333333;
+  border-radius: 6px;
+  background-color: #111111;
+  color: white;
+  font-size: 12px;
+  transition: all 0.2s ease;
+}
+
+.dates input[type="date"]:focus {
+  outline: none;
+  border-color: #666666;
+  background-color: #222222;
+  box-shadow: 0 0 0 2px rgba(102, 102, 102, 0.2);
+}
+
+.dates input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}
+
+.data {
+  background-color: #111111;
+  border: 1px solid #333333;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.dataconfig {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 15px 0;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.bandp {
+  background-color: #111111;
+  border: 1px solid #333333;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.banpsettings {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 15px 0;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.bandp label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #cccccc;
+  font-size: 12px;
+}
+
+.bandp input[type="text"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #333333;
+  border-radius: 6px;
+  background-color: #111111;
+  color: white;
+  font-size: 12px;
+  transition: all 0.2s ease;
+  margin-bottom: 15px;
+}
+
+.bandp input[type="text"]:focus {
+  outline: none;
+  border-color: #666666;
+  background-color: #222222;
+  box-shadow: 0 0 0 2px rgba(102, 102, 102, 0.2);
+}
+
+.bandp input[type="text"]::placeholder {
+  color: #888888;
+}
+
+.broker {
+  display: flex;
+  gap: 15px;
+}
+
+.broker > div {
+  flex: 1;
+}
+
+.stratconfig {
+  background-color: #111111;
+  border: 1px solid #333333;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.strategyconfig {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 15px 0;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.rsi, .sma {
+  margin-top: 15px;
+  padding: 15px;
+  background-color: #0a0a0a;
+  border: 1px solid #222222;
+  border-radius: 8px;
+}
+
+.rsi label, .sma label {
+  display: block;
+  margin-bottom: 8px;
+  margin-top: 12px;
+  font-weight: 500;
+  color: #cccccc;
+  font-size: 12px;
+}
+
+.rsi label:first-child, .sma label:first-child {
+  margin-top: 0;
+}
+
+.rsi input[type="range"], .sma input[type="range"] {
+  width: 100%;
+  margin-bottom: 8px;
+  accent-color: #666666;
+}

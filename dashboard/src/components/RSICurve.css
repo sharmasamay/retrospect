@@ -1,0 +1,21 @@
+.rsi-curve-container {
+  background: #0f0f0f;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px 0;
+  border: 1px solid #333333;
+}
+
+.rsi-curve-container svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.grid line {
+  stroke: #333333;
+}
+
+.grid path {
+  stroke-width: 0;
+}

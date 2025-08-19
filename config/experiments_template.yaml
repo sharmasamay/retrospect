@@ -1,0 +1,105 @@
+# config/experiment_template.yaml
+# This file defines one or more backtesting experiments for various strategies.
+
+experiments: # This is a list that contains multiple experiment definitions
+  
+  - name: "BuyAndHold_AAPL_FullYear" # Experiment 1: Basic Buy & Hold
+    data:
+      symbols: ["AAPL"] # Backtest AAPL
+      start_date: "2023-01-01"
+      end_date: "2023-12-31"
+      interval: "1d" # Daily data
+    broker_settings:
+      commission_per_share: 0.005
+      slippage_bps: 2
+    portfolio_settings:
+      initial_capital: 100000.0
+    strategy:
+      name: "ManualSingleAssetBuyAndHold" # Matches strategy.name in __init__
+      parameters:
+        target_symbol: "AAPL" # Specific symbol for this strategy instance
+
+  - name: "BuyAndSell_MSFT_ShortPeriod" # Experiment 2: Buy & Sell (short period to guarantee trades)
+    data:
+      symbols: ["MSFT"] # Backtest MSFT
+      start_date: "2023-01-01"
+      end_date: "2023-01-10" # Short period for simple buy/sell within dummy data
+      interval: "1d"
+    broker_settings:
+      commission_per_share: 0.005
+      slippage_bps: 2
+    portfolio_settings:
+      initial_capital: 100000.0
+    strategy:
+      name: "ManualSingleAssetBuyAndHold" # Matches strategy.name in __init__
+      parameters:
+        target_symbol: "MSFT" # Specific symbol for this strategy instance
+
+  - name: "NoTrade_SPY_Benchmark" # Experiment 3: No Trade (for benchmark comparison)
+    data:
+      symbols: ["SPY"] # Backtest SPY (common ETF benchmark)
+      start_date: "2023-01-01"
+      end_date: "2023-12-31"
+      interval: "1d"
+    broker_settings:
+      commission_per_share: 0.0
+      slippage_bps: 0.0
+    portfolio_settings:
+      initial_capital: 100000.0
+    strategy:
+      name: "NoTrade" # Matches strategy.name in __init__
+      parameters: {} # No specific parameters needed for NoTradeStrategy
+
+  - name: "ErrorProne_AMZN_Test" # Experiment 4: Designed to demonstrate error handling
+    data:
+      symbols: ["AMZN"] # Backtest AMZN
+      start_date: "2023-01-01"
+      end_date: "2023-01-31" # Short period, error will occur within it
+      interval: "1d"
+    broker_settings:
+      commission_per_share: 0.005
+      slippage_bps: 2
+    portfolio_settings:
+      initial_capital: 100000.0
+    strategy:
+      name: "ErrorProne" # Matches strategy.name in __init__
+      parameters:
+        error_after_n_points: 5 # Strategy will intentionally fail after 5 days
+        # target_symbol: "AMZN" # ErrorProneStrategy doesn't necessarily need this, but can be passed
+      
+  - name: "SMACrossover_GOOG_50_200" # Experiment 5: SMA Crossover with standard windows
+    data:
+      symbols: ["GOOG"] # Backtest GOOG
+      start_date: "2022-01-01" # Start earlier for sufficient data for 200-day SMA
+      end_date: "2023-12-31"
+      interval: "1d"
+    broker_settings:
+      commission_per_share: 0.005
+      slippage_bps: 2
+    portfolio_settings:
+      initial_capital: 100000.0
+    strategy:
+      name: "SMA Crossover" # Matches strategy.name in __init__
+      parameters:
+        short_window: 50
+        long_window: 200
+        target_symbol: "GOOG" # Specific symbol for this strategy instance
+
+  - name: "RSI_TSLA_14_30_70" # Experiment 6: RSI Strategy with standard parameters
+    data:
+      symbols: ["TSLA"] # Backtest TSLA
+      start_date: "2022-01-01" # Start earlier for sufficient data for 14-period RSI
+      end_date: "2023-12-31"
+      interval: "1d"
+    broker_settings:
+      commission_per_share: 0.005
+      slippage_bps: 2
+    portfolio_settings:
+      initial_capital: 100000.0
+    strategy:
+      name: "RSI" # Matches strategy.name in __init__
+      parameters:
+        period: 14
+        oversold_threshold: 30.0
+        overbought_threshold: 70.0
+        target_symbol: "TSLA" # Specific symbol for this strategy instance
