@@ -14,7 +14,7 @@ export default function Dashboard() {
   const componentRefs = useRef([]);
 
   const components = [
-    { id: 'kpi', component: <KPICards data={backtestData} />, delay: 1500 },
+    { id: 'kpi', component: <KPICards data={backtestData} />, delay: 0},
     { id: 'candlestick', component: <Candlestick />, delay: 3000 },
     { id: 'livesignal', component: <LiveSignal />, delay: 1500 },
     { 
