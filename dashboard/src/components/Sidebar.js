@@ -67,7 +67,7 @@ export default function Sidebar() {
                 }
             }
 
-            const backtestResponse = await fetch("http://localhost:8000/api/backtest/run", {
+            const backtestResponse = await fetch("https://retrospect-u5bq.onrender.com/api/backtest/run", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

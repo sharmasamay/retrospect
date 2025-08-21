@@ -25,7 +25,7 @@ export default function LiveSignal() {
         setError(null);
         
         try {
-            const response = await fetch('http://localhost:8000/api/signal', {
+            const response = await fetch('https://retrospect-u5bq.onrender.com/api/signal', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

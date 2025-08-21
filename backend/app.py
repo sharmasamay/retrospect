@@ -113,8 +113,7 @@ app = FastAPI(
 origins = [
     "http://localhost:3000",  # React development server
     "http://127.0.0.1:3000",  # Alternative localhost
-    "http://localhost:8000",  # FastAPI server
-    "http://127.0.0.1:8000",  # Alternative localhost
+    "https://retrospect-u5bq.onrender.com",  # Alternative localhost
     "*"  # Allow all origins for development (remove in production)
 ]
 
