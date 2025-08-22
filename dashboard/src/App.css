@@ -38,10 +38,13 @@
 }
 
 .title {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 2rem 0;
   background: #0a0a0f;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  gap: 15px; /* Space between logo and title */
 }
 
 .apptitle {
@@ -86,3 +89,9 @@
   background-color: #000000; /* black background */
   color: white;
 }
+
+.title-logo {
+  height: 50px; /* Adjust size as needed */
+  width: auto;
+}
+

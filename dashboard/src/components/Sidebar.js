@@ -177,7 +177,6 @@ export default function Sidebar() {
         <select id="dropdown" value={strat} onChange={handleDropdownChange} name="dropdown">
             <option value="RSI">RSI</option>
             <option value="SMA Crossover">Simple Moving Average Crossover</option>
-            <option value="option3">Option 3</option>
             </select>
         </div>
         {strat === 'RSI' && (
